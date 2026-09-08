@@ -1,0 +1,110 @@
+/* CSS sprite animation dùng cho cả img riêng lẫn sprite sheet */
+
+.character-animator {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.character-animator:hover {
+  transform: scale(1.05) translateY(-4px);
+}
+
+/* Floating idle animation - áp dụng kèm sprite frames */
+@keyframes float-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.character-animator.float {
+  animation: float-bounce 2s ease-in-out infinite;
+}
+
+/* Glow effect cho character khi đang "nói" */
+@keyframes speaking-glow {
+  0%, 100% { filter: drop-shadow(0 4px 6px rgba(255, 200, 100, 0.3)); }
+  50% {
+    filter: drop-shadow(0 4px 12px rgba(255, 200, 100, 0.7))
+      drop-shadow(0 0 20px rgba(255, 220, 150, 0.4));
+  }
+}
+
+.character-animator.speaking {
+  animation: speaking-glow 1.5s ease-in-out infinite;
+}
+
+/* Shake khi angry */
+@keyframes angry-shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+  20%, 40%, 60%, 80% { transform: translateX(3px); }
+}
+
+.character-animator.angry {
+  animation: angry-shake 0.5s ease-in-out infinite;
+}
+
+/* Wobble khi fall */
+@keyframes fall-wobble {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  75% { transform: rotate(8deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.character-animator.falling {
+  animation: fall-wobble 0.4s ease-in-out infinite;
+}
+
+/* Slow breathing cho idle */
+@keyframes breathing {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.character-animator.breathing {
+  animation: breathing 3s ease-in-out infinite;
+}
+
+/* Sprite sheet version - dùng khi bạn có spritesheet gộp */
+.sprite-bom,
+.sprite-phuong {
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
+.sprite-bom.walking {
+  animation: sprite-bom-walk 0.8s steps(3) infinite;
+}
+
+@keyframes sprite-bom-walk {
+  from { background-position: 0 0; }
+  to { background-position: -300% 0; }
+}
+
+/* Story narrative layout */
+.character-narrative {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+}
+
+/* Speech bubble style */
+.character-speech-bubble {
+  position: relative;
+  background: #fff8e7;
+  border: 2px solid #8b6f47;
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
+  font-family: "Quicksand", sans-serif;
+  color: #3d2817;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: bubble-pop 0.3s ease-out;
+}
+
+@keyframes bubble-pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 100% 96%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 16 83% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 175 84% 56%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 47 100% 70%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 16 83% 60%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-image:
+      radial-gradient(at 0% 0%, hsla(16, 100%, 85%, 0.4) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(47, 100%, 75%, 0.4) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(175, 84%, 80%, 0.3) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(206, 89%, 80%, 0.3) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.3);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.6);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/50 shadow-xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-finteen-coral via-finteen-purple to-finteen-sky bg-clip-text text-transparent;
+  }
+
+  .btn-shine {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--accent)) 50%,
+      hsl(var(--secondary)) 100%
+    );
+    background-size: 200% auto;
+    transition: all 0.3s ease;
+  }
+
+  .btn-shine:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px hsl(var(--primary) / 0.5);
+  }
+
+  .stat-pill {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full font-bold shadow-md;
+  }
+}
+
+
+/* ============== Visual Novel Animations ============== */
+@keyframes float-dust {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+  50% { transform: translateY(-30px) translateX(10px); opacity: 1; }
+}
+@keyframes float-cloud {
+  0% { transform: translateX(-200px); }
+  100% { transform: translateX(120vw); }
+}
+@keyframes rise-smoke {
+  0% { transform: translateY(0) scale(1); opacity: 0.5; }
+  100% { transform: translateY(-80px) scale(2); opacity: 0; }
+}
+@keyframes candy-glow {
+  0%, 100% { filter: brightness(1) drop-shadow(0 0 5px currentColor); }
+  50% { filter: brightness(1.3) drop-shadow(0 0 10px currentColor); }
+}
+@keyframes float-up {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.9; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+@keyframes aurora {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.5; }
+  50% { transform: translateY(-30px) scale(1.05); opacity: 0.9; }
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+@keyframes firefly {
+  0% { transform: translate(0, 0); opacity: 0.3; }
+  25% { transform: translate(30px, -20px); opacity: 1; }
+  50% { transform: translate(50px, 20px); opacity: 0.5; }
+  75% { transform: translate(-20px, 30px); opacity: 1; }
+  100% { transform: translate(0, 0); opacity: 0.3; }
+}
+@keyframes float-magic {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.4; }
+  50% { transform: translate(30px, -40px) rotate(180deg); opacity: 1; }
+}
+@keyframes fruit-glow {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.15); filter: brightness(1.4); }
+}
+@keyframes fall-leaf {
+  0% { transform: translateY(-50px) translateX(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh) translateX(100px) rotate(720deg); opacity: 0; }
+}
+
+/* ============== SPRITE POSE ANIMATIONS ============== */
+/* Mỗi class sprite-pose-X tương ứng với 1 pose, áp dụng cho SVG/IMG bên trong */
+
+/* Mặc định: idle - đứng yên */
+.sprite-pose-down {
+  transform-origin: bottom center;
+  transition: transform 0.4s ease-out;
+}
+
+/* Tay vươn ra bên phải (Bờm cầm tiền từ Phú Ông bên trái) */
+.sprite-pose-right-out {
+  transform-origin: bottom center;
+  animation: armReachRight 0.8s ease-out;
+}
+@keyframes armReachRight {
+  0% { transform: translateX(0) rotate(0deg); }
+  30% { transform: translateX(8px) rotate(-3deg); }
+  60% { transform: translateX(15px) rotate(-5deg); }
+  100% { transform: translateX(12px) rotate(-2deg); }
+}
+
+/* Tay vươn ra bên trái (Phú Ông đưa tiền cho Bờm) */
+.sprite-pose-left-out {
+  transform-origin: bottom center;
+  animation: armReachLeft 0.8s ease-out;
+}
+@keyframes armReachLeft {
+  0% { transform: translateX(0) rotate(0deg); }
+  30% { transform: translateX(-8px) rotate(3deg); }
+  60% { transform: translateX(-15px) rotate(5deg); }
+  100% { transform: translateX(-12px) rotate(2deg); }
+}
+
+/* Đang cầm tiền (giơ lên ngang ngực) */
+.sprite-pose-holding {
+  transform-origin: bottom center;
+  animation: armHolding 0.6s ease-out;
+}
+@keyframes armHolding {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05) translateY(-5px); }
+  100% { transform: scale(1.03) translateY(-2px); }
+}
+
+/* Giơ tay cao lên trời (ăn mừng) */
+.sprite-pose-up {
+  transform-origin: bottom center;
+  animation: armsUp 0.7s ease-out;
+}
+@keyframes armsUp {
+  0% { transform: translateY(0) scale(1); }
+  30% { transform: translateY(-8px) scale(1.05); }
+  60% { transform: translateY(-20px) scale(1.1); }
+  100% { transform: translateY(-15px) scale(1.08); }
+}
+
+/* Khoanh tay trước ngực (tự mãn / khoanh tay) */
+.sprite-pose-hips {
+  transform-origin: bottom center;
+  animation: armsHips 0.5s ease-out;
+}
+@keyframes armsHips {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.03) translateY(3px); }
+}
+
+/* Tay chỉ/ra hiệu (giải thích) */
+.sprite-pose-pointing {
+  transform-origin: bottom center;
+  animation: armPoint 0.6s ease-out;
+}
+@keyframes armPoint {
+  0% { transform: scale(1) rotate(0); }
+  100% { transform: scale(1.05) rotate(2deg) translateY(-3px); }
+}
+
+/* Tay ra hiệu (gesturing khi giải thích) */
+.sprite-pose-gesturing {
+  transform-origin: bottom center;
+  animation: armGesture 1.2s ease-in-out infinite;
+}
+@keyframes armGesture {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(-2deg) translateY(-2px); }
+  75% { transform: rotate(2deg) translateY(-2px); }
+}
+
