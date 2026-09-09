@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronRight, SkipForward, Pause, Sparkles, Trophy, CheckCircle2, RotateCcw, Home, Frown } from 'lucide-react'
+import { ChevronRight, SkipForward, Pause, Sparkles, Trophy, CheckCircle2, RotateCcw, Home, Frown, Volume2, VolumeX } from 'lucide-react'
 import { getSprite } from '../data/sprites'
 import { getBackground } from '../data/backgrounds'
 
@@ -18,6 +18,10 @@ export default function VisualNovelPlayer({ chapter, onComplete, onExit, onResta
   // 🆕 Bad ending flow: ending BG → fail modal (hỏi chơi lại / về trang chính)
   const [showFailModal, setShowFailModal] = useState(false)
   const typingRef = useRef(null)
+  // 🔊 Lồng tiếng: phát wav đã render sẵn, tra theo scene.id. KHÔNG gọi TTS lúc chạy.
+  const [muted, setMuted] = useState(false)
+  const [voices, setVoices] = useState(null)
+  const voiceRef = useRef(null)
 
   const currentScene = chapter.scenes[sceneIndex]
 
@@ -40,6 +44,31 @@ export default function VisualNovelPlayer({ chapter, onComplete, onExit, onResta
     }
     setSceneIndex(0)
   }, [_restartCounter])
+
+  // Nạp bảng tra audio một lần. Thiếu file thì game vẫn chạy, chỉ là không có tiếng.
+  useEffect(() => {
+    fetch('/audio/thang-bom/manifest.json')
+      .then((r) => (r.ok ? r.json() : null))
+      .then(setVoices)
+      .catch(() => setVoices(null))
+  }, [])
+
+  // Phát lời thoại của scene hiện tại. Đổi scene / tắt tiếng / tạm dừng đều cắt ngay.
+  useEffect(() => {
+    voiceRef.current?.pause()
+    voiceRef.current = null
+    if (muted || paused || !voices || !currentScene?.id) return
+
+    const line = voices[currentScene.id]
+    if (!line) return
+
+    const audio = new Audio(line.src)
+    voiceRef.current = audio
+    // Trình duyệt chặn autoplay nếu chưa có tương tác — nuốt lỗi, đừng để vỡ scene.
+    audio.play().catch(() => {})
+
+    return () => audio.pause()
+  }, [sceneIndex, currentScene, voices, muted, paused])
 
   // Typewriter effect
   useEffect(() => {
@@ -407,6 +436,18 @@ export default function VisualNovelPlayer({ chapter, onComplete, onExit, onResta
 
           {/* Scene counter - góc dưới phải */}
           <div className="pointer-events-auto flex items-center gap-2">
+            <button
+              onClick={(e) => { e.stopPropagation(); setMuted(!muted) }}
+              className="p-2 lg:p-2.5 bg-black/50 backdrop-blur-md rounded-full hover:bg-black/70 transition border border-white/20"
+              title={muted ? 'Bật lời thoại' : 'Tắt lời thoại'}
+            >
+              {muted ? (
+                <VolumeX className="h-4 w-4 text-white/60" />
+              ) : (
+                <Volume2 className="h-4 w-4 text-white" />
+              )}
+            </button>
+
             <button
               onClick={(e) => { e.stopPropagation(); setPaused(!paused) }}
               className="p-2 lg:p-2.5 bg-black/50 backdrop-blur-md rounded-full hover:bg-black/70 transition border border-white/20"
