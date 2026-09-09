@@ -37,6 +37,163 @@ Bước 4: Character PNG → tách nền bằng remove.bg
 ⭐⭐⭐ PHASE 6: PHÚ ÔNG SMUG/PROUD/ANGRY/SAD (4 ảnh)
 ⭐⭐⭐ PHASE 7: HEO HEO (1 ảnh) - cuối cùng
 ```
+---
+
+## ⭐ Sprite Reference: PHÚ ÔNG (phuong) — Reference Card
+
+**⚠️ REFERENCE CARD dùng để gen tất cả sprite khác nhau của Phú Ông**
+
+```
+[VILLAGE LAYOUT - SHARED CANON]
+
+[MAIN REFERENCE CARD - PHÚ ÔNG - ANGRY/GLOATING SMUG]
+Studio Ghibli character design reference sheet for PHÚ ÔNG (the rich landlord villain).
+TRADITIONAL VIETNAMESE FEUDAL RICH MAN STYLE - circa 1900s Indochina.
+
+FULL BODY VIEW - standing slightly turned 3/4 angle toward camera.
+Rich Vietnamese landlord, age 42, medium-large build, slightly fat with round belly.
+
+═══════════════════════════════════════════════════════
+⚠️ CRITICAL OUTFIT - DO NOT CHANGE (must match all sprites):
+═══════════════════════════════════════════════════════
+- ĐẦU có TÓC ĐEN búi củ tỏi (topknot bun) trên đỉnh đầu + KHĂN ĐÓNG bên ngoài
+  màu NAVY RẤT ĐẬM (#2D3248 - very dark navy-blue, gần như đen xanh) quấn ngang trán
+  — MÀU CHÍNH XÁC từ sprite phuong-neutral.png reference (đo pixel được #2B3046 = #2D3248)
+  — ĐẬM HƠN áo navy medium bên dưới (contrast ngược: khăn tối, áo sáng hơn)
+  — KHÔNG phải đen tuyệt đối, KHÔNG phải slate blue, KHÔNG phải turquoise
+  - Tóc búi củ tỏi trên đỉnh đầu màu ĐEN tuyệt đối (#000000) — đậm hơn khăn
+  - Khăn đóng quấn phía dưới búi tóc, có nếp gấp
+  - KHÔNG ĐƯỢC bỏ búi tóc, KHÔNG ĐƯỢC nhầm khăn với áo
+  - CONTRAST: tóc đen > khăn navy đậm > áo navy medium (sáng dần xuống)
+- ÁO DÀI GẤM (silk long tunic) - NAVY BLUE / COBALT BLUE (#2C5F8D — darker steel blue)
+  — đậm hơn steel blue thông thường, có chiều sâu, KHÔNG nhạt, KHÔNG xám, KHÔNG vàng, KHÔNG đỏ
+  with thin golden trim at collar and sleeve cuffs, traditional Vietnamese rich man style, loose and flowing
+- QUẦN LỤA silk TRẮNG (#F5F5DC - cream/beige) — KHÔNG phải đen, KHÔNG phải xanh
+- KHÔNG có thắt lưng khố đỏ — áo dài để rũ tự nhiên, KHÔNG quấn khăn đỏ ngang hông
+- DÉP GỖ (wooden clogs / guốc) - dark brown with simple carvings
+- GOLDEN RING on right hand index finger
+- Cane or folding fan as optional accessory
+
+═══════════════════════════════════════════════════════
+FACE DETAILS - CONSISTENT ACROSS ALL SPRITES:
+═══════════════════════════════════════════════════════
+- Round face, light tan skin (#D2B48C) với MÁ HỒNG nhẹ (#E9967A - rosy cheeks) - signature
+- Double chin visible
+- THICK BLACK MUSTACHE (râu mép) DÀY, RẬM, ĐEN, cong xuống 2 bên miệng
+  - giống kiểu phú ông Việt Nam xưa, râu mép phủ rộng 2 bên khóe miệng
+  - PHẢI DÀY DẶN, RÕ RÀNG, nổi bật trên nền da sáng
+- THÊM RÂU NHỌN DƯỚI CẰM (goatee / râu cằm nhọn) - nhỏ, nhọn, đen, dài khoảng 3-4cm
+  - điểm đặc trưng phú ông giàu có - PHẢI CÓ, KHÔNG ĐƯỢC THIẾU
+- Small CUNNING EYES, narrow slits, HƠI XẾCH LÊN (slightly slanted - East Asian style)
+- BUSHY BLACK EYEBROWS (#1A1A1A), THICK, DARK, RẬM nổi bật trên trán
+- Slightly hooked nose
+- Default expression: SMUG / CUNNING / SMIRK
+- Usually smiling showing 1-2 yellow teeth
+
+═══════════════════════════════════════════════════════
+VARIANTS TO GEN (5 expressions × 3 poses = 15 sprites):
+═══════════════════════════════════════════════════════
+
+EXPRESSIONS:
+1. neutral - default calm, slight smile
+2. smug - one side of mouth curled up, eyes narrowed (cáo già)
+3. angry - eyebrows furrowed, mouth open shouting
+4. surprised - eyebrows raised, eyes wide
+5. happy - laughing broadly, mouth wide open
+
+POSES:
+1. crossArms - arms folded across chest (kiêu ngạo, coi thường)
+2. explain - one hand gesturing outward, palm up (đang thuyết trình)
+3. offerMoney - extending hand holding gold/yang bag (mời gọi)
+4. sitTea - sitting on bamboo chair, one hand holding tea cup (ngồi uống trà)
+5. leanCane - leaning on walking cane (already rich & lazy)
+
+TRANSPARENT BACKGROUND (PNG with alpha channel).
+Studio Ghibli watercolor style. Aspect ratio 1:1 (square sprite for character-stage).
+NO TEXT, NO LABELS, NO WATERMARK.
+```
+
+**Dùng để gen**: tất cả sprite phuong-*.png
+
+---
+
+## ⭐ Sprite mới: phuong-trap-smug — `phuong-trap-smug.png`
+
+**🎯 DÙNG CHO: b10-trap (Phú Ông xiên xong, cười nhẹ nhìn Bờm ngẩn người)**
+**⚠️ Biểu cảm: GIAN XẢO / CÁO GIÀ ĐÃ THẮNG / KHOÁI TRÁ**
+
+```
+[PHÚ ÔNG - TRAP SMUG VARIANT]
+
+Studio Ghibli character portrait of PHÚ ÔNG - TRAP GLOATING EXPRESSION.
+
+⚠️ THIS IS A VARIANT OF THE PHÚ ÔNG REFERENCE CARD - keep ALL outfit details identical:
+- ĐẦU có TÓC ĐEN búi củ tỏi trên đỉnh (#000000 black tuyệt đối)
+  + KHĂN ĐÓNG màu NAVY RẤT ĐẬM (#2D3248 - very dark navy-blue) quấn bên ngoài
+  — KHÔNG phải slate blue, KHÔNG phải turquoise, KHÔNG phải cùng màu áo
+  — Khăn đóng ĐẬM HƠN áo (đậm hơn ~1 tone), tóc đen hơn khăn.
+  Búi tóc PHẢI thấy rõ trên đỉnh đầu.
+- ÁO DÀI GẤM màu XANH DƯƠNG ĐẬM NAVY/COBALT (#2C5F8D - darker than steel blue)
+  — đậm, có chiều sâu, KHÔNG nhạt, KHÔNG xám, KHÔNG vàng, KHÔNG đỏ
+  with thin gold trim at collar and sleeve cuffs
+- QUẦN LỤA silk TRẮNG/CREAM (#F5F5DC) - KHÔNG phải đen, KHÔNG phải xanh
+- KHÔNG có thắt lưng khố đỏ — áo dài để rũ tự nhiên, KHÔNG quấn khăn đỏ ngang hông
+- DÉP GỖ (guốc) nâu đậm
+- GOLDEN RING trên ngón trỏ tay phải
+- Râu mép rậm đen DÀY, cong xuống 2 bên miệng (signature) - PHẢI RÕ, KHÔNG mỏng
+- THÊM RÂU NHỌN DƯỚI CẰM (goatee nhọn, đen, dài 3-4cm) - đặc trưng phú ông
+- Da sáng ngăm (#D2B48C), mặt tròn, nọng cằm rõ
+
+POSE: STANDING slightly turned 3/4 angle toward camera (right shoulder closer).
+- Hai tay chắp trước bụng (signature power pose of rich man)
+- Ngón tay đeo NHẪN VÀNG lấp lánh
+- Lưng hơi ưỡn ra sau (kiêu ngạo, tự đại)
+- Đầu hơi NGHIÊNG XUỐNG 15 độ (đang nhìn xuống kẻ yếu thế hơn)
+
+EXPRESSION — ⚠️ ĐỌC KỸ (đây là điểm quan trọng nhất — LỪA LỌC TỐI ĐA):
+
+THAM CHIẾU ẢNH: Xem sprite phuong-smug.png hiện có để bắt đúng style — phải GIỐNG biểu cảm đó
+nhưng NẶNG HƠN về độ gian xảo (vì đây là lúc Phú Ông vừa thắng Bờm).
+
+CHI TIẾT TỪNG BỘ PHẬN MẶT:
+- MIỆNG: ĐANG CƯỜI NHẸ 1 BÊN (smirk rõ rệt) — chỉ kéo mép PHẢI lên cao
+  → Mép trái giữ nguyên hoặc hơi trề xuống (tạo asymmetry)
+  → KHÔNG cười nở, KHÔNG cười toe toét
+  → CÓ THỂ LỘ 1-2 RĂNG VÀNG (signature phú ông) ở khóe mép phải
+- MẮT: Nheo lại thành 2 đường chỉ cong (cunning crescents — như hình trăng lưỡi liềm)
+  → Mắt phải (bên cười) nháy hơi lười biếng — wink effect cười đắc ý
+  → Mắt trái mở to hơn chút — đang nhìn thẳng vào Bờm
+  → Ánh sáng trong mắt: có điểm sáng tinh ranh (cunning gleam)
+- LÔNG MÀY: nhướn 1 bên rõ rệt (lông mày phải CAO hơn lông mày trái)
+  → Lông mày trái hơi kéo xuống — tạo nét "đang tính toán"
+  → Lông mày rậm, đen, dày nổi bật trên trán
+- RÂU MÉP: nhếch lên theo nụ cười — đầu râu phải cong lên rõ rệt
+- GOATEE: râu nhọn dưới cằm PHẢI THẤY RÕ, đen, nhọn
+- MÁ: hồng nhẹ (#E9967A) — nhưng má phải hồng HƠN má trái (vì cười một bên)
+- TRÁN: có 2-3 nếp nhăn ngang nhẹ (đang tính toán)
+
+TỔNG THỂ:
+- Biểu cảm: "TAO ĐÃ THẮNG. MÀY VÀO TRÒNG RỒI, BIẾT CHƯA?"
+- Là kiểu ác nhân NGUY HIỂM NHẤT: KHÔNG la hét, KHÔNG giận dữ — chỉ cười nhẹ mà RUỘC
+- Giống con cáo già vừa thấy gà con sập bẫy: khoan khoái, ung dung, tàn nhẫn nhẹ nhàng
+- MẮT là phần quan trọng nhất — phải có CƯỜI TRONG MẮT (cunning gleam)
+
+MOOD: ĐẮC Ý / KHOÁI TRÁ / ĐÃ SẬP BẪY MỒI / CÁO GIÀ THẮNG THẾ
+- Đây là khoảnh khắc Phú Ông đọc xong "120 đồng" cho Bờm nghe
+- Bờm đang ngẩn người, và Phú Ông NHÌN BỜM với nụ cười "biết rồi nhé, mày vào tròng rồi"
+- KHÔNG giận dữ, KHÔNG hét - chỉ NHẸ NHÀNG tàn nhẫn
+
+BACKGROUND: TRANSPARENT (PNG with alpha channel).
+Studio Ghibli watercolor style. Aspect ratio 1:1 square.
+```
+
+**Dùng cho**: b10-trap (Phú Ông vừa xiên Bờm xong, đắc ý)
+
+**Sau khi gen**: Save vào `public/images/thang-bom/characters/phuong/phuong-trap-smug.png` và đăng ký vào `characters.jsx` với key `phuong-trap-smug`, sau đó sửa scene `b10-trap` trong `stories.js`:
+```javascript
+expression: 'trap-smug',  // thay vì 'angry'
+pose: 'crossArms',        // thay vì 'explain'
+```
 
 ---
 
@@ -1122,6 +1279,11 @@ NO separate sprite overlay needed ở cả 2 nhân vật.
 - [ ] Aspect ratio 16:9, dành cho thiếu nhi 8-14 tuổi
 
 **Dùng cho**: b4 (Bờm ngồi thở dài một mình trước nhà, Phú Ông đi ngang nhìn thấy hũ vàng, tiến lại cười toe toét)
+
+**✅ STATUS**: DONE — đã gen xong 2 phiên bản:
+- V1: `bg-nha-bom-phuong-den.jpg` (cũ — file đã move sang `-old` để backup)
+- V2: `bg-nha-bom-phuong-den.jpg` (mới — `Gemini_Generated_Image_q9kqsoq9kqsoq9kq.png`, 2752x1536, 16:9) — composite Bờm + Phú Ông + hiên nhà Bờm.
+- Backup cũ: `bg-nha-bom-phuong-den-old.jpg`
 ```
 
 ---
@@ -1169,6 +1331,183 @@ Aspect ratio 16:9, suitable for children's book ages 8-14.
 ```
 
 **Dùng cho**: b4, b5 (Phú Ông đến nhà Bờm, đưa tiền)
+
+---
+
+## ⭐⭐ BG-05b: Sân trước nhà Phú Ông (BỜM + PHÚ ÔNG hòa vào BG) — `bg-nha-phu-ong-san.jpg`
+
+**🎯 DÙNG CHO: b6b (narrator — Bờm đến nhà Phú Ông, thấy Phú Ông ngồi uống trà vẫy tay mời vào)**
+**⚠️ COMPOSITE BG: cả BỜM và PHÚ ÔNG đã được vẽ THẲNG VÀO BG, KHÔNG overlay sprite, KHÔNG gen character riêng!**
+**⚠️ Dùng nguyên BG này + narrator text box là xong!**
+
+```
+[VILLAGE LAYOUT - SHARED CANON]
+
+[MAIN BG-05b PROMPT - COMPOSITE: BỜM + PHÚ ÔNG]
+
+⚠️ CRITICAL: This is a COMPOSITE image — cả BỜM VÀ PHÚ ÔNG đều ĐÃ ĐƯỢC VẼ THẲNG VÀO TRONG BG,
+integrated into the scene naturally. NO separate sprite overlay needed.
+
+⚠️ CRITICAL COLORS - DO NOT CHANGE:
+- WALLS: DEEP CRIMSON RED (#8B0000)
+- ROOF: DARK CHARCOAL GREY (#2F2F2F) traditional Asian curved tile
+- WOOD COLUMNS / HIÊN: dark warm brown (#5C3A21) polished wood
+- GOLD TRIM ONLY on edges: dragon patterns at roof corners, golden studs on doors
+- STONE LIONS: grey stone (#808080)
+- DOORS: deep crimson red (#8B0000) with golden round studs
+- HIÊN FLOOR (wooden verandah): dark warm brown (#5C3A21) polished wooden planks
+- STONE TILES in courtyard: grey (#A9A9A9)
+
+═══════════════════════════════════════════════════════
+SCENE: View from INSIDE the front courtyard of Phú Ông's mansion, looking UP toward the hiên.
+═══════════════════════════════════════════════════════
+
+CAMERA ANGLE — READ CAREFULLY:
+Camera is positioned at GROUND LEVEL in the middle of the courtyard, looking slightly UP
+toward the mansion's COVERED PORCH / HIÊN NHÀ.
+The courtyard occupies the LOWER HALF of the frame, the hiên + mansion façade the UPPER HALF.
+We see BỜM (small, walking) in the courtyard, and PHÚ ÔNG (sitting) on the hiên.
+
+═══════════════════════════════════════════════════════
+⚠️ PHÚ ÔNG — đang ngồi trên hiên, vẫy tay mời Bờm vào:
+═══════════════════════════════════════════════════════
+
+VỊ TRÍ: PHÚ ÔNG ngồi trên HIÊN NHÀ, phần UPPER-MIDDLE của khung hình (khoảng 40-65% chiều cao frame),
+chiếm khoảng 1/4 khung hình bên PHẢI.
+
+TƯ THẾ — ⚠️ ĐỌC KỸ (KHÔNG vẫy tay — mất chất phú ông gian xảo):
+- Phú Ông NGỒI trên chiếc GHẾ MÂY (woven bamboo armchair), lưng tựa nhẹ, dáng ngồi
+  ĐẦY QUYỀN LỰC và KHINH THƯỜNG — kiểu "kẻ giàu ngồi coi kẻ nghèo vác mặt đến"
+- Hai CHÂN ĐAN lên nhau (chân trái đặt lên chân phải) — dáng ngồi kiêu ngạo cổ điển
+- Hai TAY ĐỂ TRÊN TAY VỊN GHẾ hoặc một tay VUỐT RÂU MÉP chậm rãi (cử chỉ đang tính toán)
+- Một tay có thể NHẤP CHÉN TRÀ chậm rãi trên bàn (đang uống, KHÔNG cầm lên vẫy)
+- Toàn bộ dáng vẻ toát ra: TAO COI MÀY NHƯ THẰNG NHÓC ĐẾN XIN ĂN
+- Đầu hơi NGHIÊNG XUỐNG nhìn Bờm dưới sân (góc nhìn từ trên cao xuống dưới thấp) —
+  thể hiện rõ khoảng cách đẳng cấp
+
+NGOẠI HÌNH:
+- 42 tuổi, mập mạp, bụng bia hơi tròn
+- Mặt tròn, da ngăm hơn Bờm (#D2B48C), nọng cằm rõ
+- Râu mép LỚN, DÀY, RẬM ĐEN, cong xuống 2 bên miệng (kiểu phú ông Việt Nam xưa)
+  - râu mép PHẢI RÕ RÀNG, phủ rộng 2 bên khóe miệng, KHÔNG được mỏng hay nhạt
+- THÊM RÂU NHỌN DƯỚI CẰM (goatee nhọn, đen, dài 3-4cm) - đặc trưng phú ông giàu
+- Mắt nhỏ tinh ranh HƠI XẾCH, lông mày rậm DÀY, nheo lại vì đang cười mời gọi (cunning smile)
+- Má HỒNG nhẹ (#E9967A) - signature phú ông
+- Đầu có TÓC ĐEN búi củ tỏi trên đỉnh (#000000)
+  + KHĂN ĐÓNG màu NAVY RẤT ĐẬM (#2D3248 - very dark navy-blue) quấn bên ngoài
+  — KHÔNG phải slate blue, KHÔNG phải turquoise. Khăn đóng ĐẬM HƠN áo navy medium.
+- Mặc ÁO DÀI GẤM (the traditional silk long tunic for rich men) màu XANH DƯƠNG ĐẬM NAVY/COBALT
+  (#2C5F8D — darker steel blue, có chiều sâu, KHÔNG nhạt, KHÔNG xám, KHÔNG vàng, KHÔNG đỏ)
+  — phải KHỚP với sprite Phú Ông đã có (reference: phuong-neutral.png)
+  với viền/hoa văn nhỏ thêu chỉ vàng nhạt ở cổ áo và tay áo — áo dài rộng, sang trọng
+- Quần lụa TRẮNG/CREAM (#F5F5DC - ivory), rộng — KHÔNG phải đen, KHÔNG phải xanh
+- KHÔNG có khố đỏ quấn ngang hông — áo dài để rũ tự nhiên
+- Chân đi DÉP da thêu hoa, kiểu guốc gỗ của người giàu (NOT dép tổ ong)
+
+BIỂU CẢM — ⚠️ GIAN XẢO, KHINH THƯỜNG, KHÔNG thân thiện:
+- ĐANG CƯỜI NHẸ 1 BÊN MIỆNG (smirk, không cười nở) — kiểu cười NGẤM NGẦM đang tính kế
+- Mắt nheo lại nhìn chằm chằm xuống Bờm (cunning gaze, calculating)
+- Lông mày nhướn 1 bên — vẻ mặt "ờ, thằng nhóc nghèo đến thật à?"
+- RÂU MÉP hơi nhếch lên theo nụ cười — kiểu đã đoán được Bờm sắp sập bẫy
+- Toàn bộ dáng vẻ toát ra vẻ CÁO GIÀ ĐANG COI MỒI — KHÔNG hề niềm nở, KHÔNG vẫy tay mời gọi
+  (vì trong truyện, Phú Ông muốn THẮNG thế — Bờm phải tự vác mặt đến xin, không phải khách mời)
+
+TRƯỚC MẶT PHÚ ÔNG:
+- 1 BÀN TRÀ NHỎ bằng gỗ tối (#5C3A21), kiểu truyền thống Việt Nam
+- Trên bàn: 1 ẤM TRÀ sứ trắng với hoa văn xanh dương + 2-3 CHÉN TRÀ nhỏ xếp trên khay tròn
+- 1 DĨA NHỎ đựng vài miếng MỨT sen / mứt gừng (kiểu đãi khách quý)
+
+═══════════════════════════════════════════════════════
+⚠️ BỜM — đang đi vào sân, ngẩng đầu nhìn lên hiên:
+═══════════════════════════════════════════════════════
+
+VỊ TRÍ: BỜM đứng ở FOREGROUND (khoảng 15-30% chiều cao frame từ dưới lên),
+ở 1/4 khung hình bên TRÁI, trên đường gạch đá giữa sân.
+
+TƯ THẾ:
+- Bờm đang BƯỚC ĐI về phía hiên nhà (nhưng còn cách bậc thang khoảng 4-5 bước chân)
+- Một chân trước, một chân sau — dáng đi tự nhiên, không vội
+- Đầu NGẨNG LÊN nhìn về phía Phú Ông trên hiên (mặt ngước 45 độ, thấy rõ mặt Bờm)
+- Hai tay THẢ LỎNG 2 bên hông, hơi lúng túng vì lần đầu vào nhà giàu
+- Lưng hơi khom một chút — dáng của thằng nhóc nghèo đang rụt rè trước cường quyền
+  (KHÔNG cúi đầu sát đất, vẫn còn chút tự tin của Bờm)
+
+NGOẠI HÌNH (theo REFERENCE CARD BỜM):
+- 15 tuổi, thân hình nhỏ thó, gầy, cao khoảng 150cm
+- Mặt tròn bầu bĩnh, da sáng hồng (#F5DEB3)
+- Mắt to tròn, hiếu kỳ, ngơ ngác — đang ngạc nhiên trước sự xa hoa của nhà Phú Ông
+- Tóc đen cắt ngắn húi cua (#1A1A1A), gọn gàng
+- ÁO BÀ BA nâu bạc màu (#8B6F47), tay ngắn, rộng thùng thình (hand-me-down của anh)
+- Quần đùi xanh đen (#1E3A5F), ngắn trên đầu gối
+- Chân ĐI CHÂN ĐẤT (không dép) — vì Bờm nghèo, đến nhà người ta cũng không có dép đẹp
+- Trên đầu đội NÓN LÁ rộng vành — lễ phép khi đến nhà người lớn
+- Trên tay cầm 1 chiếc KHĂN MỎNG cuộn lại (kiểu Bờm mang theo khăn để lau mồ hôi)
+
+BIỂU CẢM:
+- Mồm hơi MỞ RA, ngạc nhiên — kiểu "ồ, nhà to thế này luôn hả?"
+- Mắt mở to nhìn quanh sân — đang choáng ngợp
+- Hơi rụt rè, vai hơi co lại — Bờm là thằng nhóc làng chưa quen nhà giàu
+
+═══════════════════════════════════════════════════════
+BACKGROUND DETAILS (toàn cảnh sân + hiên):
+═══════════════════════════════════════════════════════
+
+LAYOUT TỪ DƯỚI LÊN:
+1. FOREGROUND (bottom 30%): Sân gạch đá lớn (#A9A9A9) sạch bóng, có 1 con MÈO VÀNG
+   đang nằm cuộn tròn phơi nắng bên trái. Bờm đang đi trên đường gạch nhẵn giữa sân.
+
+2. LOWER-MIDDLE (30-45%): 2 CHẬU CÂY BONSAI lớn bằng sứ, đặt đối xứng 2 bên lối đi,
+   + 1 ĐÈN ĐÁ (stone lantern) nhỏ bên trái.
+   2 con NGHÊ ĐÁ (stone lion) to ở góc dưới cùng trái-phải khung hình (chỉ thấy đầu + chân trước).
+
+3. MIDDLE (40-50%): BẬC THANG ĐÁ rộng 3-4 bước dẫn lên hiên (grey stone #808080).
+   Chính giữa bậc thang: 1 CHẬU CẢNH NHỎ đặt trên bệ đá thấp.
+
+4. UPPER-MIDDLE (50-70%): HIÊN NHÀ — nơi Phú Ông ngồi.
+   - Hiên rộng, có 4-6 CỘT GỖ TRÒN màu nâu đậm (#5C3A21) bóng loáng
+   - SÀN HIÊN lát ván gỗ nâu (#5C3A21) sáng bóng
+   - Trên hiên (theo thứ tự từ trái qua):
+     - 1 BỨC BÌNH PHONG gỗ chạm rồng (decorative screen)
+     - BÀN TRÀ + ấm chén + ghế mây của Phú Ông (đã mô tả ở trên)
+     - 1 KỆ GỖ nhỏ đựng vài cuốn SÁCH CỔ bìa da
+   - PHÍA SAU PHÚ ÔNG: bức TƯỜNG ĐỎ SON (#8B0000) với CỬA GỖ chính đóng + 2 ô CỬA SỔ nhỏ có hoa văn
+
+5. BACKGROUND (top 20%): MÁI NHÀ ngói xám cong (#2F2F2F), có RỒNG VÀNG nhỏ ở 2 đầu kèo,
+   trên mái có 1 CON CHIM PHƯỢNG HOÀNG nhỏ bằng sứ tráng men (đặc trưng nhà giàu).
+   Phía trên mái: BẦU TRỜI XANH SÁNG với vài đám mây trắng + NẮNG SÁNG chiếu từ trên trái xuống.
+
+═══════════════════════════════════════════════════════
+LIGHTING & ATMOSPHERE:
+═══════════════════════════════════════════════════════
+
+- NẮNG SÁNG SỚM (khoảng 8-9h sáng) chiếu từ phía TRÊN TRÁI
+- Bóng dài của Bờm đổ xuống sân gạch (cho thấy sáng sớm)
+- Bóng cột gỗ đổ dài trên hiên
+- Ánh nắng chiếu vào Phú Ông → làm nổi bật áo gấm navy medium + khăn đóng navy đậm hơn
+- Vài HẠT BỤI vàng bay lơ lửng trong nắng (dust motes) → không khí yên tĩnh, hơi ngột ngạt
+- Không khí: yên tĩnh, trang nghiêm, áp lực vô hình của kẻ giàu trước thằng nhóc nghèo
+
+═══════════════════════════════════════════════════════
+CRITICAL CHECKLIST:
+═══════════════════════════════════════════════════════
+- ✅ PHÚ ÔNG đang ngồi trên hiên, tay vẫy chào (KHÔNG đứng)
+- ✅ PHÚ ÔNG mặc áo gấm navy medium + khăn đóng navy đậm hơn + tóc búi củ tỏi đen (đúng phong cách phú ông thời xưa)
+- ✅ BỜM đang đi vào sân, ngẩng đầu nhìn lên hiên (KHÔNG đứng yên, KHÔNG cầm gì đặc biệt)
+- ✅ BỜM chân đất + đội nón lá (đúng chất nhóc làng nghèo)
+- ✅ Cả 2 nhân vật ĐÃ ĐƯỢC VẼ THẲNG VÀO BG (KHÔNG overlay sprite)
+- ✅ Bờm trông nhỏ bé so với Phú Ông → thể hiện rõ khoảng cách giàu - nghèo
+- ✅ NO text, NO labels, NO watermark
+- Studio Ghibli background art style, soft watercolor, warm pastel
+- Aspect ratio 16:9, suitable for children's book ages 8-14
+```
+
+**Dùng cho**: b6b (Bờm đến nhà Phú Ông — composite có sẵn 2 nhân vật, KHÔNG cần sprite overlay)
+
+**Sau khi gen**: Save file vào `public/images/thang-bom/backgrounds/bg-nha-phu-ong-san.jpg` và đăng ký vào `backgrounds.jsx` với key `thangbom-nha-phu-ong-san` để dùng cho scene `b6b`.
+
+**✅ STATUS**: DONE — đã gen xong, file `bg-nha-phu-ong-san.jpg` (2752x1536, 16:9), composite có sẵn Phú Ông ngồi trên hiên + hiên nhà gạch + bậc đá. Backup tạm: `bg-nha-phu-ong-san-old.jpg`.
+
+> ℹ️ **Lưu ý từ user**: BG cũ vẽ Phú Ông KHÔNG CÓ THẮT LƯNG (sai chi tiết). BG mới `Gemini_Generated_Image_6699336699336699.png` đã có thắt lưng đầy đủ — đúng phong cách phú ông thời xưa.
 
 ---
 
@@ -1232,6 +1571,106 @@ Muted colors: grey sky, faded yellow-brown broken thatch, dry dirt ground, dull 
 Aspect ratio 16:9, suitable for children's book ages 8-14.
 ```
 
+**Dùng cho**: b11-trap (Bờm mất trắng - ending xấu)
+
+---
+
+## 🔄 BG-07 V2: Nhà Bờm đổ nát + BỜM COMPOSITE QUỲ GỐI HỐI HẬN (ending xấu) — `bg-bom-buon-nha-trong.jpg`
+**⚠️ BẮT BUỘC 16:9 — Nếu gen ra 1:1 hoặc tỉ lệ khác → XÓA và gen lại ngay**
+**⚠️ PHIÊN BẢN SỬA LỖI** — Gen lại vì BG cũ sai:
+- ❌ V1 sai: nhà gạch đỏ-trắng (kiến trúc thành phố, KHÔNG giống nhà Bờm) + có biển "FOR SALE" tiếng Anh + KHÔNG có Bờm
+- ✅ V2 đúng: nhà Bờm mái rơm/vách tre đổ nát + BỜM COMPOSITE QUỲ GỐI HỐI HẬN (kneeling pose, đầu cúi gằm) + KHÔNG có em bé + bảng tiếng Việt (nếu cần)
+
+**VIEW: Nhìn từ ngoài đường vào nhà Bờm đã đổ nát. Bờm QUỲ GỐI trước hiên nhà đầu cúi gằm hối hận.**
+
+```
+╔══════════════════════════════════════════════════════════════╗
+║  ⚠️  CRITICAL ASPECT RATIO: 16:9 (1920x1080 or 2752x1536)  ║
+║  KHÔNG được gen 1:1 (vuông), 4:3, 9:16, 21:9 HAY bất kỳ   ║
+║  tỉ lệ nào khác. BẮT BUỘC phải là 16:9.                   ║
+╚══════════════════════════════════════════════════════════════╝
+
+[BG-07 V2 PROMPT - REVISION: GIỐNG LAYOUT bg-nha-bom-hien.jpg]
+
+⚠️ CRITICAL REVISION: BG-07 V2 PHẢI GIỐNG LAYOUT bg-nha-bom-hien.jpg (căn nhà lệch PHẢI,
+hiên nhà bên phải, cây đa góc phải xa, vườn rau bên trái, đường đất chạy ngang phía trước,
+gà đi trên đường) — CHỈ KHÁC: căn nhà chính ĐỔ NÁT + Bờm composite QUỲ GỐI.
+
+⚠️ TỈ LỆ: BẮT BUỘC 16:9. Đặt tỉ lệ 16:9 trong Gemini/Gemini Ultra trước khi gen.
+   Nếu AI gen ra 1:1 (vuông) hoặc tỉ lệ khác → XÓA và gen lại.
+
+⚠️ CRITICAL — FIX ALL THESE MISTAKES FROM V1:
+- MUST match nhà Bờm style: YELLOW-BROWN THATCH ROOF (#C9A876) + TAN BAMBOO WALLS (#D4A574)
+  KHÔNG được vẽ nhà gạch đỏ-trắng, KHÔNG được vẽ nhà ngói xám kiến trúc thành phố
+- MUST have BỜM composite in foreground **QUỲ GỐI HỐI HẬN trước hiên nhà đổ nát**
+  (kneeling pose, đầu cúi gằm)
+- MUST NOT have any "FOR SALE" sign in ENGLISH — nếu cần bảng thì dùng chữ HÁN TỰ hoặc
+  tiếng Việt viết tay "BÁN NHÀ" trên tấm ván gỗ mục (đặt nghiêng cạnh nhà)
+- MUST NOT have any English text anywhere in image
+- MUST be Vietnamese village aesthetic, NOT modern city, NOT Western architecture
+
+[BG-07 V2 LAYOUT — MIRROR bg-nha-bom-hien.jpg]
+
+GIỐNG BG-04b (`bg-nha-bom-hien.jpg`) — căn nhà chính lệch PHẢI, hiên nhà bên phải,
+đường đất chạy ngang phía trước, vườn rau bên trái, cây đa góc phải xa. CHỈ KHÁC căn nhà
+chính ĐỔ NÁT + Bờm composite QUỲ GỐI.
+
+VỊ TRÍ CỤ THỂ:
+- CĂN NHÀ CHÍNH (BỜM) lệch PHẢI frame (~60% chiều rộng bên phải)
+  + Hiên tre phía trước căn nhà
+  + Mái rơm ĐỔ NẤT: rách một mảng lớn, rơm rủ xuống, xương gỗ lộ
+  + Vách tre: sập một phần bên trái căn nhà, nứt nẻ, hở ra bên trong tối đen
+  + Cửa gỗ DARK BROWN (#5C3317) treo lệch, gần rơi khỏi bản lề, hoặc đổ xuống đất
+  + Bên trong nhà tối, nhìn thấy vài đồ đạc gãy (chén bát vỡ, chiếu rách)
+  + Chi tiết hiên giữ nguyên BG-04b: chum nước (#A0522D) đổ nghiêng, bắp ngô rơi xuống
+    đất, bó tỏi khô rơi, tấm chiếu cói rách gấp lại, ghế đẩu gãy 1 chân
+
+- VƯỜN RAU bên TRÁI (giữ nguyên BG-04b):
+  + Hàng rau xanh (#5A8C3E) nhưng đã héo quắt, vàng úa một phần
+  + Hàng rào tre thấp bao quanh, vài cọc tre bị gãy đổ
+
+- CÂY ĐA CỔ THỤ ở góc PHẢI XA (giữ nguyên BG-04b):
+  + Cao, tán rộng (#2D4A2B), vẫn xanh tươi (contrast - thiên nhiên vẫn trường tồn)
+  + Trên cây có vài con chim nhỏ (#4A4A4A)
+
+- ĐƯỜNG ĐẤT VÀNG (#A0826D) chạy ngang phía trước (giữ nguyên BG-04b):
+  + Từ trái qua phải, rộng, có dấu vết xe bò
+  + Trên đường: 1-2 con gà (#D4A574) đang đi kiếm ăn — vẫn giữ chi tiết này của BG-04b
+
+- PHÍA SAU NHÀ BỜM (background giữa):
+  + 2-3 căn nhà tranh khác của xóm BỜM vẪN ĐỨNG VỮNG (mái rơm vàng, vách tre nguyên vẹn)
+  + Chỉ căn nhà Bờm là đổ nát → tạo contrast tương phản
+  + Tán cây xanh của vài cây ăn quả sau nhà
+
+- CÂY CHUỐI cạnh nhà Bờm (giữ nguyên BG-04b): lá xanh (#5A8C3E) hơi rũ
+
+TRÊN HIÊN NHÀ BỜM ĐỔ NÁT (composite - REQUIRED):
+- BỜM (~10-12 tuổi, áo nâu đã sờn + khăn xếch đậm + chân đất + quần vải thô đen-nâu)
+  **QUỲ GỐI trên hiên trước nhà đổ nát** (kneeling on both knees on the dry dirt of the
+  porch, đầu cúi gằm xuống hối hận, hai tay chống xuống đất hoặc ôm đầu, vai sụp xuống)
+- Tư thế QUỲ GỐI = kneeling pose, KHÔNG đứng, KHÔNG ngồi xổm, KHÔNG ôm em
+- Bờm nhìn về phía căn nhà đổ nát với vẻ mặt hối hận, buồn, tuyệt vọng
+- KHÔNG có em bé / KHÔNG có nhân vật phụ khác — chỉ một mình Bờm quỳ
+
+Scattered on DRY DIRT ground (#A0826D) around the hut and on the path:
+- Broken pottery (chum vỡ, chén bát vỡ)
+- Torn cloth (vải rách)
+- Fallen dry rice stalks (rơm khô rơi)
+- Old broken nông cụ (cuốc gãy, cày gãy)
+- Vài viên gạch ngói vỡ từ mái (nếu căn nhà là gạch) — hoặc KHÔNG có nếu là nhà tre
+- Bảng gỗ mục viết "BÁN NHÀ" tiếng Việt (NẾU có — đặt nghiêng cạnh nhà)
+
+Grey overcast sky (#A8A8A8) with dark clouds (#5A5A5A), melancholic twilight atmosphere.
+Faded color palette: grey sky, faded yellow-brown broken thatch, dull dry dirt.
+DRY GROUND throughout, NO water, NO mud, NO rain, NO river.
+
+Studio Ghibli melancholic watercolor style but child-appropriate, no blood, no scary elements.
+Aspect ratio: 16:9 (1920x1080 or 2752x1536) — BẮT BUỘC.
+```
+**⚠️ NẾU GEN RA ẢNH VUÔNG (1:1) HOẶC TỈ LỆ KHÁC → XÓA VÀ GEN LẠI ngay. KHÔNG dùng.**
+**✅ STATUS**: DONE — `bg-bom-buon-nha-trong.jpg` (16:9, 9.6MB). File cũ đã xóa.
+**Đăng ký vào `backgrounds.jsx`**: key `thangbom-bom-buon` trỏ file `bg-bom-buon-nha-trong.jpg`
+**Đăng ký vào `VisualNovelPlayer.jsx`**: array `BG_HAS_CHARACTER` (đã có sẵn — composite Bờm)
 **Dùng cho**: b11-trap (Bờm mất trắng - ending xấu)
 
 ---

@@ -902,6 +902,10 @@ const IMAGE_BACKGROUNDS = {
   'thangbom-goc-da-bom': '/images/thang-bom/backgrounds/bg-goc-da-bom.jpg', // BG composite có sẵn Bờm
   // Nhà Phú Ông (cổng nhà to giàu có)
   'thangbom-nha-phu-ong': '/images/thang-bom/backgrounds/bg-nha-phu-ong.jpg',
+  // Sân trước nhà Phú Ông (composite: Phú Ông ngồi trên hiên + Bờm đi vào sân)
+  'thangbom-nha-phu-ong-san': '/images/thang-bom/backgrounds/bg-nha-phu-ong-san.jpg',
+  // Hiên nhà Phú Ông - BG TRỐNG (chỉ ghế mây + bàn trà), dùng khi overlay sprite Phú Ông
+  'thangbom-nha-phu-ong-hien-trong': '/images/thang-bom/backgrounds/bg-nha-phu-ong-hien-trong.jpg',
   // Phòng của Phú Ông (nội thất)
   'thangbom-phong-phu-ong': '/images/thang-bom/backgrounds/bg-phong-phu-ong.jpg',
   // Ngoại cảnh sân nhà Bờm buổi chiều - dùng cho cảnh Phú Ông đến dụ dỗ

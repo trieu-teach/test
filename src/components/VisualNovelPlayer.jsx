@@ -5,7 +5,7 @@ import { getSprite } from '../data/sprites'
 import { getBackground } from '../data/backgrounds'
 
 // VisualNovelPlayer - Engine chính
-export default function VisualNovelPlayer({ chapter, onComplete, onExit, onRestart }) {
+export default function VisualNovelPlayer({ chapter, onComplete, onExit, onRestart, restartSceneId, _sessionKey, _restartCounter }) {
   const [sceneIndex, setSceneIndex] = useState(0)
   const [displayedText, setDisplayedText] = useState('')
   const [isTyping, setIsTyping] = useState(false)
@@ -21,15 +21,25 @@ export default function VisualNovelPlayer({ chapter, onComplete, onExit, onResta
 
   const currentScene = chapter.scenes[sceneIndex]
 
-  // Reset khi đổi chapter
+  // 🔄 Xử lý restart: khi _restartCounter thay đổi → reset về scene restartSceneId
   useEffect(() => {
-    setSceneIndex(0)
+    if (_restartCounter === undefined || _restartCounter === 0) return // Bỏ qua lần mount đầu
+    console.log('[DEBUG-VN-RESTART] _restartCounter changed:', _restartCounter, 'restartSceneId:', restartSceneId)
     setDisplayedText('')
     setShowChoices(false)
     setShowLessonModal(false)
     setShowCupModal(false)
     setShowFailModal(false)
-  }, [chapter?.id])
+    if (restartSceneId && chapter?.scenes) {
+      const idx = chapter.scenes.findIndex((s) => s.id === restartSceneId)
+      console.log('[DEBUG-VN-RESTART] Jump to scene idx:', idx)
+      if (idx >= 0) {
+        setSceneIndex(idx)
+        return
+      }
+    }
+    setSceneIndex(0)
+  }, [_restartCounter])
 
   // Typewriter effect
   useEffect(() => {
@@ -69,6 +79,21 @@ export default function VisualNovelPlayer({ chapter, onComplete, onExit, onResta
   }
 
   const handleNext = () => {
+    // 🆕 Check endingType NGAY ở scene hiện tại (không chờ scene cuối array)
+    // Vì bad/good ending có thể nằm giữa array, các scene sau là nhánh khác
+    if (currentScene?.endingType === 'bad') {
+      setBgTransition(true)
+      setTimeout(() => setBgTransition(false), 200)
+      setShowFailModal(true)
+      return
+    }
+    if (currentScene?.endingType === 'good') {
+      setBgTransition(true)
+      setTimeout(() => setBgTransition(false), 200)
+      setShowLessonModal(true)
+      return
+    }
+
     if (sceneIndex < chapter.scenes.length - 1) {
       setBgTransition(true)
       setTimeout(() => {
@@ -76,14 +101,9 @@ export default function VisualNovelPlayer({ chapter, onComplete, onExit, onResta
         setBgTransition(false)
       }, 400)
     } else {
-      // 🆕 Scene cuối: phân nhánh theo endingType
+      // Fallback cho scene cuối không có endingType
       const lastScene = chapter.scenes[sceneIndex]
-      // BAD ending → mở fail modal (hỏi chơi lại / về trang chính)
-      if (lastScene?.endingType === 'bad') {
-        setShowFailModal(true)
-      }
-      // GOOD ending → mở lesson modal (flow cũ: lesson → cup → onComplete)
-      else if (lastScene?.lessonData) {
+      if (lastScene?.lessonData) {
         setShowLessonModal(true)
       } else {
         onComplete?.()
@@ -510,7 +530,7 @@ export default function VisualNovelPlayer({ chapter, onComplete, onExit, onResta
 
         {/* 🆕 Fail Modal (Bad Ending) - hiện SAU khi ending BG, hỏi chơi lại / về trang chính */}
         <AnimatePresence>
-          {showFailModal && (
+          {showFailModal && currentScene?.endingType === 'bad' && (
             <motion.div
               key="fail-modal"
               initial={{ opacity: 0 }}
@@ -525,7 +545,7 @@ export default function VisualNovelPlayer({ chapter, onComplete, onExit, onResta
                 animate={{ scale: 1, y: 0, opacity: 1 }}
                 exit={{ scale: 0.5, opacity: 0 }}
                 transition={{ type: 'spring', damping: 18 }}
-                className="bg-gradient-to-br from-gray-100 to-red-50 rounded-3xl p-6 lg:p-10 max-w-md w-full shadow-2xl border-4 border-red-300 text-center"
+                className="bg-gradient-to-br from-gray-100 to-red-50 rounded-3xl p-6 lg:p-10 max-w-lg w-full shadow-2xl border-4 border-red-300 text-center max-h-[90vh] overflow-y-auto"
               >
                 {/* Icon buồn */}
                 <motion.div
@@ -536,17 +556,33 @@ export default function VisualNovelPlayer({ chapter, onComplete, onExit, onResta
                   transition={{ duration: 2, repeat: Infinity, repeatDelay: 0.5 }}
                   className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-gray-400 to-gray-600 text-6xl shadow-xl mb-4"
                 >
-                  😢
+                  {currentScene.endingMessage?.icon || '😢'}
                 </motion.div>
 
-                {/* Title */}
-                <h2 className="text-3xl lg:text-4xl font-display font-black text-red-700 mb-2">
-                  Bạn đã thất bại!
+                {/* Title - lấy từ endingMessage hoặc fallback */}
+                <h2 className="text-3xl lg:text-4xl font-display font-black text-red-700 mb-4">
+                  {currentScene.endingMessage?.title || 'Bạn đã thất bại!'}
                 </h2>
-                <p className="text-gray-700 text-base lg:text-lg mb-6 leading-relaxed">
-                  Bờm đã rơi vào <strong className="text-red-600">bẫy nợ xoay vòng</strong> của Phú Ông và mất tất cả.
-                  <br />
-                  Hãy thử lại để giúp Bờm đưa ra quyết định tốt hơn nhé!
+
+                {/* Hậu quả - lấy từ endingMessage */}
+                {currentScene.endingMessage?.consequence && (
+                  <p className="text-gray-700 text-base lg:text-lg mb-4 leading-relaxed text-left">
+                    {currentScene.endingMessage.consequence}
+                  </p>
+                )}
+
+                {/* Bài học - lấy từ endingMessage */}
+                {currentScene.endingMessage?.lesson && (
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg mb-6 text-left">
+                    <p className="text-gray-800 text-sm lg:text-base font-semibold leading-relaxed">
+                      💡 <strong>Bài học:</strong> {currentScene.endingMessage.lesson}
+                    </p>
+                  </div>
+                )}
+
+                {/* Câu hỏi cuối */}
+                <p className="text-gray-700 text-base lg:text-lg mb-6 leading-relaxed font-semibold">
+                  Bạn có muốn chơi lại để giúp Bờm đưa ra quyết định tốt hơn không?
                 </p>
 
                 {/* Action buttons */}
@@ -554,26 +590,27 @@ export default function VisualNovelPlayer({ chapter, onComplete, onExit, onResta
                   <button
                     onClick={(e) => {
                       e.stopPropagation()
+                      console.log('[DEBUG-VN] Button "Có, chơi lại" clicked!')
                       setShowFailModal(false)
-                      // Chơi lại: reset về scene 0
+                      // Chơi lại: parent sẽ tăng key → remount component → reset state về scene b8
                       onRestart?.()
                     }}
                     className="flex-1 py-4 bg-gradient-to-r from-finteen-coral to-finteen-sunny hover:from-red-500 hover:to-orange-500 text-white font-black text-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
                   >
                     <RotateCcw className="h-5 w-5" />
-                    Chơi lại
+                    Có, chơi lại
                   </button>
                   <button
                     onClick={(e) => {
                       e.stopPropagation()
                       setShowFailModal(false)
-                      // Về trang chính
+                      // Về trang chính (parent navigate /package)
                       onExit?.()
                     }}
                     className="flex-1 py-4 bg-white hover:bg-gray-50 text-gray-700 font-bold text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all hover:scale-[1.02] flex items-center justify-center gap-2 border-2 border-gray-300"
                   >
                     <Home className="h-5 w-5" />
-                    Về trang chính
+                    Không, về trang chính
                   </button>
                 </div>
               </motion.div>

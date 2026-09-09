@@ -16,6 +16,11 @@ export function ChapterPage() {
   const navigate = useNavigate()
   const completedChapters = useGameStore((s) => s.completedChapters)
   const [storyPlaying, setStoryPlaying] = useState(null)
+  // 🆕 Restart counter: tăng mỗi lần "Chơi lại" → trigger useEffect trong VN để reset state
+  // (KHÔNG remount component, KHÔNG dùng key)
+  const [restartCounter, setRestartCounter] = useState(0)
+  // Scene ID để nhảy tới khi restart
+  const [restartToSceneId, setRestartToSceneId] = useState(null)
 
   const pkg = PACKAGES.find((p) => p.id === packageId)
   const chapters = CHAPTERS[packageId] || []
@@ -37,8 +42,19 @@ export function ChapterPage() {
     return (
       <VisualNovelPlayer
         chapter={storyPlaying}
+        restartSceneId={restartToSceneId}  // null = chơi từ đầu, "b8" = quay lại lựa chọn
+        _restartCounter={restartCounter}  // Tăng mỗi lần restart → trigger reset
         onComplete={() => setStoryPlaying(null)}
-        onExit={() => setStoryPlaying(null)}
+        onExit={() => {
+          setStoryPlaying(null)
+          setRestartToSceneId(null)
+          navigate(`/package/${packageId}`)
+        }}
+        onRestart={() => {
+          console.log('[DEBUG-CP] onRestart called, setting restartToSceneId=b8, counter=', restartCounter)
+          setRestartToSceneId('b8')
+          setRestartCounter((c) => c + 1)
+        }}
       />
     )
   }
@@ -175,7 +191,11 @@ export function ChapterPage() {
                           <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            onClick={() => setStoryPlaying(getStoryByChapterId(chapter.id))}
+                            onClick={() => {
+                              setRestartToSceneId(null)  // Reset về chơi từ đầu
+                              setPlaySessionKey((k) => k + 1)  // Force remount
+                              setStoryPlaying(getStoryByChapterId(chapter.id))
+                            }}
                             className="px-4 py-2.5 rounded-xl bg-gradient-to-br from-finteen-sunny to-yellow-400 hover:from-yellow-400 hover:to-finteen-sunny text-white font-bold text-sm shadow-lg flex items-center gap-1.5 whitespace-nowrap border-2 border-white/30"
                             title="Tìm hiểu - mở game visual novel"
                           >

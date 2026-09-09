@@ -758,6 +758,7 @@ export const SPRITES = {
     portrait: ImageSprite('/images/thang-bom/characters/phuong/phuong-neutral.png', 'Phú Ông - chân dung'),
     neutral: ImageSprite('/images/thang-bom/characters/phuong/phuong-neutral.png', 'Phú Ông bình thường'),
     smug: ImageSprite('/images/thang-bom/characters/phuong/phuong-smug.png', 'Phú Ông tự mãn'),
+    'trap-smug': ImageSprite('/images/thang-bom/characters/phuong/phuong-trap-smug.png', 'Phú Ông - xiên bẫy Bờm xong, đắc ý'),
     sad: ImageSprite('/images/thang-bom/characters/phuong/phuong-sad.png', 'Phú Ông buồn/ngại'),
     happy: ImageSprite('/images/thang-bom/characters/phuong/phuong-smug.png', 'Phú Ông vui'),
     proud: ImageSprite('/images/thang-bom/characters/phuong/phuong-smug.png', 'Phú Ông kiêu ngạo'),

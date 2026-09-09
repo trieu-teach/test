@@ -189,7 +189,7 @@ export const stories = {
           },
           {
             id: 'B',
-            text: 'Chờ đến khi đói thật rồi hẵng mua',
+            text: 'Chờ đến khi đói thật rồi mới mua',
             consequence: 'Đúng rồi! Đó mới là CẦN',
             nextScene: 'lesson-review',
             isCorrect: true,
@@ -230,9 +230,9 @@ export const stories = {
         title: 'Phép chia 3 lọ',
         icon: '🏺',
         points: [
-          '🏺 Lọ 1 - TIÊU: 50% (10 xu) - mua đồ mình thích',
-          '🏺 Lọ 2 - TIẾT KIỆM: 30% (6 xu) - cho mục tiêu lớn',
-          '🏺 Lọ 3 - CHO ĐI: 20% (4 xu) - giúp người khác',
+          '🏺 Lọ 1 - TIÊU: nửa số tiền (10 xu) - mua đồ mình thích',
+          '🏺 Lọ 2 - TIẾT KIỆM: ba phần mười (6 xu) - cho mục tiêu lớn',
+          '🏺 Lọ 3 - CHO ĐI: hai phần mười (4 xu) - giúp người khác',
         ],
       },
       {
@@ -392,9 +392,9 @@ export const stories = {
         title: 'Lãi kép - Phép màu thứ 8 của thế giới',
         icon: '🌳',
         points: [
-          '🌱 100 xu tiết kiệm + 10% lãi/năm = 110 xu sau 1 năm',
-          '🌿 110 xu + 10% lãi/năm = 121 xu sau 2 năm',
-          '🌳 Tiền sinh ra tiền - càng lâu càng nhiều!',
+          '🌱 Đồng xu bỏ lọ cả năm, cuối năm sinh thêm một phần mười — thành một trăm mười xu',
+          '🌿 Năm sau, một trăm mười xu lại sinh thêm một phần mười — thành một trăm hai mốt xu',
+          '🌳 Cứ thế, tiền đẻ ra tiền - càng lâu càng nhiều!',
         ],
       },
       {
@@ -590,12 +590,12 @@ export const stories = {
       {
         id: 'k2',
         type: 'lesson',
-        title: 'Sức mạnh thời gian (lãi 10%/năm)',
+        title: 'Sức mạnh của thời gian (mỗi năm tiền sinh thêm một phần mười)',
         icon: '📈',
         points: [
-          '🌱 100 xu sau 1 năm = 110 xu (lãi 10 xu)',
-          '🌿 100 xu sau 5 năm = 161 xu (lãi 61 xu)',
-          '🌳 100 xu sau 10 năm = 259 xu (lãi 159 xu!)',
+          '🌱 Một trăm xu gửi một năm — cuối năm thành một trăm mười xu (lãi mười xu)',
+          '🌿 Một trăm xu gửi năm năm — thành một trăm sáu mốt xu (lãi sáu mốt xu)',
+          '🌳 Một trăm xu gửi mười năm — thành hai trăm năm chín xu (lãi một trăm năm chín xu!)',
         ],
       },
       {
@@ -608,22 +608,22 @@ export const stories = {
       {
         id: 'k4',
         type: 'choice',
-        prompt: 'Bạn 10 tuổi, tiết kiệm 100 xu/năm. Ước lượng: tới 20 tuổi bạn có bao nhiêu? (lãi 10%/năm)',
+        prompt: 'Bạn mười tuổi, mỗi năm bỏ lọ một trăm xu. Tới hai mươi tuổi, bạn có khoảng bao nhiêu xu? (mỗi năm tiền sinh thêm một phần mười)',
         illustration: '📊',
         choices: [
           {
             id: 'A',
-            text: 'Khoảng 1.000 xu',
-            consequence: 'Sai. Lãi kép cho nhiều hơn thế!',
+            text: 'Khoảng một ngàn xu',
+            consequence: 'Sai rồi. Sức mạnh thời gian còn lớn hơn thế!',
             nextScene: 'end-k',
           },
           {
             id: 'B',
-            text: 'Khoảng 1.593 xu',
-            consequence: 'Đúng! Lãi kép rất mạnh!',
+            text: 'Khoảng một ngàn năm trăm chín mươi ba xu',
+            consequence: 'Đúng rồi! Lãi kép quả là kỳ diệu!',
             nextScene: 'end-k',
             isCorrect: true,
-            reasoning: 'Công thức lãi kép: 100 × ((1.1^10 - 1) / 0.1) ≈ 1,593 xu',
+            reasoning: 'Công thức cổ tích: mỗi năm tiền sinh thêm một phần mười, mười năm liền thành kho báu lớn',
           },
         ],
       },
@@ -825,7 +825,7 @@ export const stories = {
         characterPosition: 'left',
         expression: 'smug',
         pose: 'offerMoney',
-        text: '"Này Bờm! Tao đi ngang thấy mày ôm hũ vàng kìa. Có phải mày đang tính mua thêm ruộng hok? Tao cho mày vay 100 đồng vàng nha! Lãi chỉ 10% một năm thôi — rẻ bèo lắm!"',
+        text: '"Này Bờm! Tao đi ngang thấy mày ôm hũ vàng kìa. Có phải mày đang tính mua thêm ruộng không? Tao cho mày vay một trăm đồng vàng nha! Mỗi năm chỉ trả thêm một phần mười thôi — rẻ lắm!"',
       },
       {
         id: 'b6',
@@ -835,29 +835,47 @@ export const stories = {
         characterPosition: 'center',
         expression: 'thinking',
         pose: 'leanForward',
-        text: 'Bờm nghe vậy, gãi đầu, tính nhẩm trong bụng: "100 vàng, lãi 10%... tức là năm sau trả 110. Nhiều hơn một chút thôi." Bờm ngước lên: "Vậy... được không ạ?"',
+        text: 'Bờm nghe vậy, gãi đầu, tính nhẩm trong bụng: "Một trăm vàng, mỗi năm thêm một phần mười... tức là năm sau trả một trăm mười. Nhiều hơn một chút thôi." Bờm ngước lên: "Vậy... được không ạ?"',
       },
-      // ===== CẢNH 6b: BỜM ĐẾN NHÀ PHÚ ÔNG =====
+      // ===== CẢNH 6b: PHÚ ÔNG ĐỒNG Ý =====
       {
-        id: 'b6b',
-        type: 'narrator',
-        background: 'thangbom-nha-phu-ong',
-        text: 'Phú Ông gật đầu lia lịa: "Được chứ! Được chứ! Sang ngày mai, mày cứ ghé nhà tao, tao sẽ ký hợp đồng với mày." Hôm sau, Bờm đội nón, lội bộ sang nhà Phú Ông — căn nhà lớn nhất làng. Cổng sắt cao ngất, tường đỏ phủ rêu, sân gạch sạch bong. Phú Ông đang ngồi uống trà trên hiên, thấy Bờm liền đứng dậy vẫy tay.',
+        id: 'b6-phuong-reply',
+        type: 'dialogue',
+        background: 'thangbom-nha-bom-hien',
         character: 'phuong',
         characterPosition: 'left',
         expression: 'smug',
         pose: 'reachOut',
+        text: 'Phú Ông gật đầu lia lịa: "Được chứ! Được chứ! Sang ngày mai, mày cứ ghé nhà tao, tao sẽ ký hợp đồng với mày."',
       },
-      // ===== CẢNH 7: PHÚ ÔNG DỤ DỖ =====
+      // ===== CẢNH 6c: BỜM ĐẾN NHÀ PHÚ ÔNG (narrator — composite BG có sẵn 2 nhân vật) =====
       {
-        id: 'b7',
+        id: 'b6b',
+        type: 'narrator',
+        background: 'thangbom-nha-phu-ong-san',
+        text: 'Hôm sau, Bờm đội nón, lội bộ sang nhà Phú Ông — căn nhà lớn nhất làng. Bước qua cổng sắt, Bờm choáng ngợp trước sân gạch sạch bong, hai chậu bonsai to, đèn đá, nghê đá... Trên hiên, Phú Ông ngồi trên ghế mây, hai chân đan lên nhau, tay vuốt râu mép, đang nhấp chén trà — không buồn đứng dậy, chỉ liếc xuống Bờm bằng ánh mắt cáo già đang xem mồi.',
+      },
+      // ===== CẢNH 6d: PHÚ ÔNG NHÌN BỜM TỪ TRÊN HIÊN (cười gian - overlay sprite Phú Ông) =====
+      {
+        id: 'b6-phuong-lookdown',
         type: 'dialogue',
-        background: 'thangbom-nha-phu-ong',
+        background: 'thangbom-nha-phu-ong-hien-trong',
         character: 'phuong',
         characterPosition: 'right',
         expression: 'smug',
-        pose: 'offerMoney',
-        text: '"Vào đây vào đây, Bờm!" — Phú Ông xoa tay mời vào. "Tao đợi mày đây nè. 100 đồng vàng này, mua thêm ruộng, sang năm lúa tốt là trả hết. Lãi 10% thôi — rẻ bèo mà!"',
+        pose: 'crossArms',
+        text: 'Phú Ông nhìn xuống từ hiên, cười nhếch mép: "Hm... mày tới thật hả Bờm? Tao tưởng mày hết gan rồi chứ. Thôi vào đi, đừng có đứng ngoài nắng — chân đất vô sân tao không buồn lau đâu."',
+      },
+      // ===== CẢNH 7: VÀO NHÀ, KÝ HỢP ĐỒNG =====
+      {
+        id: 'b7',
+        type: 'dialogue',
+        background: 'thangbom-phong-phu-ong',
+        character: 'phuong',
+        characterPosition: 'right',
+        expression: 'proud',
+        pose: 'explain',
+        text: '"Ngồi đây. Đọc cho kỹ trước khi ký — tao không ép mày đâu." Phú Ông đẩy tờ hợp đồng qua, tay vẫn vuốt râu mép. "Một trăm vàng, mỗi năm lãi thêm một phần mười. Sang năm mày có thóc dư, tao lấy thóc. Mày không trả được... thì ruộng đó là của tao. Công bằng mà, đúng không Bờm?"',
       },
       // ===== CẢNH 7b: VÀO PHÒNG KÝ HỢP ĐỒNG =====
       {
@@ -880,7 +898,7 @@ export const stories = {
         choices: [
           {
             id: 'A',
-            text: 'Ký ngay! Lãi 10% thôi mà, trả có 110 đồng.',
+            text: 'Ký ngay! Lãi chỉ một phần mười thôi, trả có một trăm mười đồng vàng.',
             consequence: 'Bờm không đọc kỹ hợp đồng...',
             nextScene: 'b9-trap',
           },
@@ -912,9 +930,9 @@ export const stories = {
         background: 'thangbom-phong-phu-ong',
         character: 'phuong',
         characterPosition: 'right',
-        expression: 'angry',
+        expression: 'trap-smug',
         pose: 'explain',
-        text: 'Phú Ông cười nhạt: "Nợ gốc 100 đồng. Lãi 10% là 10. Phí quản lý 5. Phí trễ hạn 3. Phí tư vấn 2. Tổng cộng... 120 đồng." Bờm ngẩn người. Phú Ông lại nói thêm: "Mà năm nay mày trả chưa kịp hạn rồi, phí trễ tăng lên 5 nha. Sang năm nữa là phí phạt cộng dồn luôn."',
+        text: 'Phú Ông cười nhạt: "Nợ gốc một trăm đồng. Lãi một phần mười là mười. Phí quản lý năm. Phí trễ hạn ba. Phí tư vấn hai. Tổng cộng... một trăm hai mươi đồng." Bờm ngẩn người. Phú Ông lại nói thêm: "Mà năm nay mày trả chưa kịp hạn rồi, phí trễ tăng lên năm nha. Sang năm nữa là phí phạt cộng dồn luôn."',
       },
       {
         id: 'b11-trap',
@@ -922,13 +940,20 @@ export const stories = {
         background: 'thangbom-bom-buon',
         text: 'Một năm trôi qua, Bờm gom tiền đi trả — nhưng nợ lại tăng. Hai năm, ba năm... Tiền lời chồng lên tiền lời. Ruộng bán, nhà bán, cuối cùng Bờm đứng trước căn nhà trống đổ nát, ôm đứa em nhỏ, không biết ngày mai sẽ ra sao. Đó là BẪY NỢ XOAY VÒNG — nơi người nghèo mãi mãi không thoát ra được.',
         endingType: 'bad',
+        // Data cho Fail Modal (popup báo thất bại + hỏi chơi lại / về trang chính)
+        endingMessage: {
+          title: 'Bạn đã bị Phú Ông lừa!',
+          icon: '😢',
+          consequence: 'Bờm đã rơi vào bẫy nợ xoay vòng của Phú Ông. Vì không đọc kỹ hợp đồng trước khi ký, Bờm phải gánh chịu hàng loạt phí ẩn: phí quản lý, phí tư vấn, phí trễ hạn... Ruộng bán, nhà bán, Bờm mất trắng tất cả.',
+          lesson: '📜 LUÔN đọc kỹ hợp đồng trước khi ký — đặc biệt là các điều khoản về phí ẩn, lãi suất và hình phạt trễ hạn.',
+        },
       },
       // ===== GOOD ENDING: BỜM HỎI KỸ =====
       {
         id: 'b10-smart',
         type: 'narrator',
         background: 'thangbom-phong-phu-ong',
-        text: 'Bờm nhận hợp đồng nhưng chưa ký. Thay vào đó, cậu đưa lên đọc kỹ, rồi ngước lên hỏi: "Cho hỏi, lãi 10% này là lãi đơn hay lãi kép ạ? Có phí gì thêm không? Phạt trễ hạn bao nhiêu? Có điều khoản ẩn gì không ạ?"',
+        text: 'Bờm nhận hợp đồng nhưng chưa ký. Thay vào đó, cậu đưa lên đọc kỹ, rồi ngước lên hỏi: "Cho hỏi, lãi này là lãi đơn hay lãi kép ạ? Có phí gì thêm không? Phạt trễ hạn bao nhiêu? Có điều khoản ẩn gì không ạ?"',
         character: 'bom',
         characterPosition: 'left',
         expression: 'thinking',
