@@ -1,0 +1,117 @@
+{
+  "b0-intro": {
+    "src": "/audio/thang-bom/b0-intro.mp3",
+    "sec": 12.0,
+    "voice": "nu-luu-loat"
+  },
+  "b0b-cast-bom": {
+    "src": "/audio/thang-bom/b0b-cast-bom.mp3",
+    "sec": 11.04,
+    "voice": "nu-luu-loat"
+  },
+  "b0c-cast-phuong": {
+    "src": "/audio/thang-bom/b0c-cast-phuong.mp3",
+    "sec": 14.56,
+    "voice": "nu-luu-loat"
+  },
+  "b1": {
+    "src": "/audio/thang-bom/b1.mp3",
+    "sec": 13.04,
+    "voice": "nu-luu-loat"
+  },
+  "b2": {
+    "src": "/audio/thang-bom/b2.mp3",
+    "sec": 13.84,
+    "voice": "nu-luu-loat"
+  },
+  "b2b": {
+    "src": "/audio/thang-bom/b2b.mp3",
+    "sec": 11.76,
+    "voice": "nu-luu-loat"
+  },
+  "b2c": {
+    "src": "/audio/thang-bom/b2c.mp3",
+    "sec": 7.52,
+    "voice": "nu-luu-loat"
+  },
+  "b3": {
+    "src": "/audio/thang-bom/b3.mp3",
+    "sec": 11.44,
+    "voice": "nu-luu-loat"
+  },
+  "b4": {
+    "src": "/audio/thang-bom/b4.mp3",
+    "sec": 12.16,
+    "voice": "nu-luu-loat"
+  },
+  "b5": {
+    "src": "/audio/thang-bom/b5.mp3",
+    "sec": 10.08,
+    "voice": "nu-luu-loat"
+  },
+  "b6": {
+    "src": "/audio/thang-bom/b6.mp3",
+    "sec": 9.52,
+    "voice": "nu-luu-loat"
+  },
+  "b6-phuong-reply": {
+    "src": "/audio/thang-bom/b6-phuong-reply.mp3",
+    "sec": 6.32,
+    "voice": "nu-luu-loat"
+  },
+  "b6b": {
+    "src": "/audio/thang-bom/b6b.mp3",
+    "sec": 18.58,
+    "voice": "nu-luu-loat"
+  },
+  "b6-phuong-lookdown": {
+    "src": "/audio/thang-bom/b6-phuong-lookdown.mp3",
+    "sec": 10.96,
+    "voice": "nu-luu-loat"
+  },
+  "b7": {
+    "src": "/audio/thang-bom/b7.mp3",
+    "sec": 15.54,
+    "voice": "nu-luu-loat"
+  },
+  "b7b": {
+    "src": "/audio/thang-bom/b7b.mp3",
+    "sec": 11.92,
+    "voice": "nu-luu-loat"
+  },
+  "b9-trap": {
+    "src": "/audio/thang-bom/b9-trap.mp3",
+    "sec": 13.36,
+    "voice": "nu-luu-loat"
+  },
+  "b10-trap": {
+    "src": "/audio/thang-bom/b10-trap.mp3",
+    "sec": 16.82,
+    "voice": "nu-luu-loat"
+  },
+  "b11-trap": {
+    "src": "/audio/thang-bom/b11-trap.mp3",
+    "sec": 16.98,
+    "voice": "nu-luu-loat"
+  },
+  "b10-smart": {
+    "src": "/audio/thang-bom/b10-smart.mp3",
+    "sec": 11.76,
+    "voice": "nu-luu-loat"
+  },
+  "b11-smart": {
+    "src": "/audio/thang-bom/b11-smart.mp3",
+    "sec": 9.6,
+    "voice": "nu-luu-loat"
+  },
+  "b12-smart": {
+    "src": "/audio/thang-bom/b12-smart.mp3",
+    "sec": 8.88,
+    "voice": "nu-luu-loat"
+  },
+  "b13-ending": {
+    "src": "/audio/thang-bom/b13-ending.mp3",
+    "sec": 15.46,
+    "voice": "nu-luu-loat"
+  }
+}
